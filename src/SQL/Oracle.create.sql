@@ -118,9 +118,9 @@ CREATE TABLE "Доступ"
 
 	"КодДоступа" NUMBER(10) NULL,
 
-	"Доступ" NUMBER(1) NULL,
-
 	"КолвоКлючей" NUMBER(10) NULL,
+
+	"Доступ" NUMBER(1) NULL,
 
 	"Комната" RAW(16) NOT NULL,
 

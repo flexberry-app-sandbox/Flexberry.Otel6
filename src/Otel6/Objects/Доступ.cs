@@ -27,6 +27,7 @@ namespace IIS.Otel6
 
     // *** End programmer edit section *** (Доступ CustomAttributes)
     [AutoAltered()]
+    [Caption("Регистрация/настройка доступа")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("ДоступE", new string[] {
             "КодДоступа as \'Код доступа\'",
@@ -68,9 +69,9 @@ namespace IIS.Otel6
         
         private int fКодДоступа;
         
-        private bool fДоступ;
-        
         private int fКолвоКлючей;
+        
+        private bool fДоступ;
         
         private IIS.Otel6.Комната fКомната;
         
@@ -359,7 +360,6 @@ namespace IIS.Otel6
         public virtual void НастроитьДоступ()
         {
             // *** Start programmer edit section *** (Доступ.НастроитьДоступ method implementation)
-
             return;
             // *** End programmer edit section *** (Доступ.НастроитьДоступ method implementation)
         }

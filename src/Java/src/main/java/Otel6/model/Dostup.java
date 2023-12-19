@@ -26,11 +26,11 @@ public class Dostup {
     @Column(name = "КодДоступа")
     private Integer коддоступа;
 
-    @Column(name = "Доступ")
-    private Boolean доступ;
-
     @Column(name = "КолвоКлючей")
     private Integer колвоключей;
+
+    @Column(name = "Доступ")
+    private Boolean доступ;
 
     @EdmIgnore
     @Converter(converterClass = UUIDConverter.class, name = "Komnata")
@@ -89,20 +89,20 @@ public class Dostup {
       this.коддоступа = коддоступа;
     }
 
-    public Boolean getДоступ() {
-      return доступ;
-    }
-
-    public void setДоступ(Boolean доступ) {
-      this.доступ = доступ;
-    }
-
     public Integer getКолвоКлючей() {
       return колвоключей;
     }
 
     public void setКолвоКлючей(Integer колвоключей) {
       this.колвоключей = колвоключей;
+    }
+
+    public Boolean getДоступ() {
+      return доступ;
+    }
+
+    public void setДоступ(Boolean доступ) {
+      this.доступ = доступ;
     }
 
 
