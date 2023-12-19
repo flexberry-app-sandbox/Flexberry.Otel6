@@ -46,5 +46,11 @@ namespace IIS.Otel6
         // *** End programmer edit section *** (Статусы.3 CustomAttributes)
         [Caption("Возвращен")]
         3,
+        
+        // *** Start programmer edit section *** (Статусы.4 CustomAttributes)
+
+        // *** End programmer edit section *** (Статусы.4 CustomAttributes)
+        [Caption("Не выдан")]
+        4,
     }
 }

@@ -3,10 +3,11 @@ import $ from 'jquery';
 import DS from 'ember-data';
 import { validator } from 'ember-cp-validations';
 import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes';
+import СтатусыEnum from '../../../enums/i-i-s-otel6-статусы';
 
 export let Model = Mixin.create({
   кодКлюча: DS.attr('number'),
-  статус: DS.attr('i-i-s-otel6-статусы')
+  статус: DS.attr('i-i-s-otel6-статусы', { defaultValue: СтатусыEnum.4 })
 });
 
 export let ValidationRules = {

@@ -22,7 +22,7 @@ export default Controller.extend({
             link: 'i-i-s-otel6-доступ-l',
             caption: i18n.t('forms.application.sitemap.регитсрация-и-настройка-доступа.i-i-s-otel6-доступ-l.caption'),
             title: i18n.t('forms.application.sitemap.регитсрация-и-настройка-доступа.i-i-s-otel6-доступ-l.title'),
-            icon: 'chart line',
+            icon: 'chart bar',
             children: null
           }]
         }, {
@@ -34,13 +34,12 @@ export default Controller.extend({
             link: 'i-i-s-otel6-должность-l',
             caption: i18n.t('forms.application.sitemap.справочник-сотрудники.i-i-s-otel6-должность-l.caption'),
             title: i18n.t('forms.application.sitemap.справочник-сотрудники.i-i-s-otel6-должность-l.title'),
-            icon: 'chart line',
+            icon: 'chart bar',
             children: null
           }, {
             link: 'i-i-s-otel6-сотрудник-l',
             caption: i18n.t('forms.application.sitemap.справочник-сотрудники.i-i-s-otel6-сотрудник-l.caption'),
             title: i18n.t('forms.application.sitemap.справочник-сотрудники.i-i-s-otel6-сотрудник-l.title'),
-            icon: 'list',
             children: null
           }]
         }, {
@@ -52,13 +51,13 @@ export default Controller.extend({
             link: 'i-i-s-otel6-отель-l',
             caption: i18n.t('forms.application.sitemap.справочник-отель.i-i-s-otel6-отель-l.caption'),
             title: i18n.t('forms.application.sitemap.справочник-отель.i-i-s-otel6-отель-l.title'),
-            icon: 'file',
+            icon: 'paperclip',
             children: null
           }, {
             link: 'i-i-s-otel6-комната-l',
             caption: i18n.t('forms.application.sitemap.справочник-отель.i-i-s-otel6-комната-l.caption'),
             title: i18n.t('forms.application.sitemap.справочник-отель.i-i-s-otel6-комната-l.title'),
-            icon: 'tasks',
+            icon: 'folder',
             children: null
           }]
         }, {
@@ -70,7 +69,7 @@ export default Controller.extend({
             link: 'i-i-s-otel6-смарт-ключ-l',
             caption: i18n.t('forms.application.sitemap.смарт-ключ.i-i-s-otel6-смарт-ключ-l.caption'),
             title: i18n.t('forms.application.sitemap.смарт-ключ.i-i-s-otel6-смарт-ключ-l.title'),
-            icon: 'phone',
+            icon: 'tags',
             children: null
           }]
         }
