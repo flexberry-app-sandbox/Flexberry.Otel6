@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Должность",
+      "projection": "ДолжностьL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Сотрудник",
+  "name": "IISOtel6СотрудникE",
+  "className": "СотрудникE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-otel6-сотрудник",
+      "modelProjection": "СотрудникE"
+    }
+  ]
+}

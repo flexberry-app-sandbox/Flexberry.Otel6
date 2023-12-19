@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-otel6-должность-e",
+  "editForm": "i-i-s-otel6-должность-e",
+  "external": false,
+  "caption": "Должность",
+  "name": "IISOtel6ДолжностьL",
+  "className": "ДолжностьL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-otel6-должность",
+      "modelProjection": "ДолжностьL"
+    }
+  ]
+}

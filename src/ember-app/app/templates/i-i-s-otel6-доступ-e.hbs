@@ -1,0 +1,179 @@
+<h3 class="ui header">{{t "forms.i-i-s-otel6-доступ-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.кодДоступа
+      class=(if (v-get validationModel "кодДоступа" "isInvalid") "error")
+      label=(t "forms.i-i-s-otel6-доступ-e.кодДоступа-caption")
+      data-test-i-i-s-otel6-доступ-e-кодДоступа=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "кодДоступа" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-otel6-доступ-e.доступ-caption"}}</label>
+    {{flexberry-checkbox
+      readonly=readonly
+      value=model.доступ
+      class=(if (v-get validationModel "доступ" "isInvalid") "error")
+      data-test-i-i-s-otel6-доступ-e-доступ=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "доступ" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-otel6-доступ-e.сотрудник-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.сотрудник
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="сотрудник"
+      projection="СотрудникL"
+      title=(t "forms.i-i-s-otel6-доступ-e.сотрудник-caption")
+      readonly=readonly
+      componentName="сотрудникLookup"
+      class=(if (v-get validationModel "сотрудник" "isInvalid") "error")
+      data-test-i-i-s-otel6-доступ-e-сотрудник=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "сотрудник" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-otel6-доступ-e.комната-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.комната
+      displayAttributeName="кодКомнаты"
+      autocomplete=true
+      relationName="комната"
+      projection="КомнатаL"
+      title=(t "forms.i-i-s-otel6-доступ-e.комната-caption")
+      readonly=readonly
+      componentName="комнатаLookup"
+      class=(if (v-get validationModel "комната" "isInvalid") "error")
+      data-test-i-i-s-otel6-доступ-e-комната=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "комната" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-otel6-доступ-e-комната-колвоМест="true">
+    <label>{{t "forms.i-i-s-otel6-доступ-e.комната.колвоМест-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-otel6-места")
+      value=model.комната.колвоМест
+      class=(if (v-get validationModel.комната "колвоМест" "isInvalid") "error")
+      readonly=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.комната "колвоМест" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-otel6-доступ-e-комната-класс="true">
+    <label>{{t "forms.i-i-s-otel6-доступ-e.комната.класс-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-otel6-классы")
+      value=model.комната.класс
+      class=(if (v-get validationModel.комната "класс" "isInvalid") "error")
+      readonly=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.комната "класс" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.комната.стоимость
+      class=(if (v-get validationModel.комната "стоимость" "isInvalid") "error")
+      label=(t "forms.i-i-s-otel6-доступ-e.комната.стоимость-caption")
+      data-test-i-i-s-otel6-доступ-e-комната-стоимость=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.комната "стоимость" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-otel6-доступ-e.смартКлюч-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.смартКлюч
+      displayAttributeName="кодКлюча"
+      autocomplete=true
+      relationName="смартКлюч"
+      projection="СмартКлючL"
+      title=(t "forms.i-i-s-otel6-доступ-e.смартКлюч-caption")
+      readonly=readonly
+      componentName="смартКлючLookup"
+      class=(if (v-get validationModel "смартКлюч" "isInvalid") "error")
+      data-test-i-i-s-otel6-доступ-e-смартКлюч=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "смартКлюч" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.колвоКлючей
+      class=(if (v-get validationModel "колвоКлючей" "isInvalid") "error")
+      label=(t "forms.i-i-s-otel6-доступ-e.колвоКлючей-caption")
+      data-test-i-i-s-otel6-доступ-e-колвоКлючей=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "колвоКлючей" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-otel6-доступ-e-смартКлюч-статус="true">
+    <label>{{t "forms.i-i-s-otel6-доступ-e.смартКлюч.статус-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-otel6-статусы")
+      value=model.смартКлюч.статус
+      class=(if (v-get validationModel.смартКлюч "статус" "isInvalid") "error")
+      readonly=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.смартКлюч "статус" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-otel6-доступ-e.регистрЗаписи-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="регистрЗаписиGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.регистрЗаписи
+      content=model.регистрЗаписи
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "регистрЗаписи" "isInvalid") "error")
+      data-test-i-i-s-otel6-доступ-e-регистрЗаписи=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "регистрЗаписи" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-otel6-доступ-e.гости-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="гостиGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.гости
+      content=model.гости
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "гости" "isInvalid") "error")
+      data-test-i-i-s-otel6-доступ-e-гости=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "гости" "message")}}
+  </div>
+</form>

@@ -1,0 +1,78 @@
+﻿{
+  "name": "IISOtel6РегистрЗаписи",
+  "modelName": "i-i-s-otel6-регистр-записи",
+  "className": "РегистрЗаписи",
+  "nameSpace": "IIS.Otel6",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаВыезда",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаЗаселения",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодРегистра",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "доступ",
+      "relatedTo": "i-i-s-otel6-доступ",
+      "inverse": "регистрЗаписи"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "РегистрЗаписиE",
+      "modelName": "i-i-s-otel6-регистр-записи",
+      "attrs": [
+        {
+          "name": "кодРегистра",
+          "caption": "Код регистра",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаЗаселения",
+          "caption": "Дата заселения",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаВыезда",
+          "caption": "Дата выезда",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

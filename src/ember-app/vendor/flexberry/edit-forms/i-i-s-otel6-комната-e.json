@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Отель",
+      "projection": "ОтельL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Комната",
+  "name": "IISOtel6КомнатаE",
+  "className": "КомнатаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-otel6-комната",
+      "modelProjection": "КомнатаE"
+    }
+  ]
+}

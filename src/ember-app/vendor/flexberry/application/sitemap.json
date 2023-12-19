@@ -1,0 +1,81 @@
+﻿{
+  "applicationCaption": "Otel6",
+  "applicationTitle": "Otel6",
+  "items": [
+    {
+      "link": null,
+      "menuName": "регитсрация-и-настройка-доступа",
+      "caption": "Регитсрация и настройка доступа",
+      "title": "Регитсрация и настройка доступа",
+      "children": [
+        {
+          "link": "i-i-s-otel6-доступ-l",
+          "menuName": null,
+          "caption": "Доступ",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочник-сотрудники",
+      "caption": "Справочник сотрудники",
+      "title": "Справочник сотрудники",
+      "children": [
+        {
+          "link": "i-i-s-otel6-должность-l",
+          "menuName": null,
+          "caption": "Должность",
+          "title": "Должность",
+          "children": null
+        },
+        {
+          "link": "i-i-s-otel6-сотрудник-l",
+          "menuName": null,
+          "caption": "Сотрудник",
+          "title": "Сотрудник",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочник-отель",
+      "caption": "Справочник отель",
+      "title": "Справочник отель",
+      "children": [
+        {
+          "link": "i-i-s-otel6-отель-l",
+          "menuName": null,
+          "caption": "Отель",
+          "title": "Отель",
+          "children": null
+        },
+        {
+          "link": "i-i-s-otel6-комната-l",
+          "menuName": null,
+          "caption": "Комната",
+          "title": "Комната",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "смарт-ключ",
+      "caption": "Смарт ключ",
+      "title": "Смарт ключ",
+      "children": [
+        {
+          "link": "i-i-s-otel6-смарт-ключ-l",
+          "menuName": null,
+          "caption": "СмартКлюч",
+          "title": "Смарт ключ",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

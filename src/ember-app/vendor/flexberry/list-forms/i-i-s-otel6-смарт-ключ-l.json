@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-otel6-смарт-ключ-e",
+  "editForm": "i-i-s-otel6-смарт-ключ-e",
+  "external": false,
+  "caption": "Смарт ключ",
+  "name": "IISOtel6СмартКлючL",
+  "className": "СмартКлючL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-otel6-смарт-ключ",
+      "modelProjection": "СмартКлючL"
+    }
+  ]
+}

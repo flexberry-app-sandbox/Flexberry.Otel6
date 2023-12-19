@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Смарт ключ",
+  "name": "IISOtel6СмартКлючE",
+  "className": "СмартКлючE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-otel6-смарт-ключ",
+      "modelProjection": "СмартКлючE"
+    }
+  ]
+}

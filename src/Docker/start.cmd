@@ -1,0 +1,1 @@
+docker-compose -p otel6 up -d

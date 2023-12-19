@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISOtel6Должность",
+  "modelName": "i-i-s-otel6-должность",
+  "className": "Должность",
+  "nameSpace": "IIS.Otel6",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "кодДолжности",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ДолжностьE",
+      "modelName": "i-i-s-otel6-должность",
+      "attrs": [
+        {
+          "name": "кодДолжности",
+          "caption": "Код должности",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ДолжностьL",
+      "modelName": "i-i-s-otel6-должность",
+      "attrs": [
+        {
+          "name": "кодДолжности",
+          "caption": "Код должности",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

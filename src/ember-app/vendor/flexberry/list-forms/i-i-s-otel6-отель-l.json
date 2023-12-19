@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-otel6-отель-e",
+  "editForm": "i-i-s-otel6-отель-e",
+  "external": false,
+  "caption": "Отель",
+  "name": "IISOtel6ОтельL",
+  "className": "ОтельL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-otel6-отель",
+      "modelProjection": "ОтельL"
+    }
+  ]
+}

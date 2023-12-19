@@ -1,0 +1,78 @@
+﻿{
+  "name": "IISOtel6Гости",
+  "modelName": "i-i-s-otel6-гости",
+  "className": "Гости",
+  "nameSpace": "IIS.Otel6",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "кодГостя",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "комментарий",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "фИО",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "доступ",
+      "relatedTo": "i-i-s-otel6-доступ",
+      "inverse": "гости"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ГостиE",
+      "modelName": "i-i-s-otel6-гости",
+      "attrs": [
+        {
+          "name": "кодГостя",
+          "caption": "Код гостя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фИО",
+          "caption": "ФИО",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "комментарий",
+          "caption": "Комментарий",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

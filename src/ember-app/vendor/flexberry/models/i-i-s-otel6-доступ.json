@@ -1,0 +1,320 @@
+﻿{
+  "name": "IISOtel6Доступ",
+  "modelName": "i-i-s-otel6-доступ",
+  "className": "Доступ",
+  "nameSpace": "IIS.Otel6",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "доступ",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодДоступа",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "колвоКлючей",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "комната",
+      "relatedTo": "i-i-s-otel6-комната",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "смартКлюч",
+      "relatedTo": "i-i-s-otel6-смарт-ключ",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудник",
+      "relatedTo": "i-i-s-otel6-сотрудник",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "регистрЗаписи",
+      "relatedTo": "i-i-s-otel6-регистр-записи",
+      "inverse": "доступ"
+    },
+    {
+      "name": "гости",
+      "relatedTo": "i-i-s-otel6-гости",
+      "inverse": "доступ"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ДоступE",
+      "modelName": "i-i-s-otel6-доступ",
+      "attrs": [
+        {
+          "name": "кодДоступа",
+          "caption": "Код доступа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "доступ",
+          "caption": "Доступ",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "колвоКлючей",
+          "caption": "Количество ключей",
+          "hidden": false,
+          "index": 11
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Сотрудник",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Сотрудник",
+          "name": "сотрудник",
+          "relatedTo": "i-i-s-otel6-сотрудник",
+          "inverse": null
+        },
+        {
+          "lookupValue": "КодКомнаты",
+          "lookupValueField": "кодКомнаты",
+          "relationName": "Комната",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "кодКомнаты",
+              "caption": "Код комнаты",
+              "hidden": true,
+              "index": 5
+            },
+            {
+              "name": "колвоМест",
+              "caption": "Количество мест",
+              "hidden": false,
+              "index": 6
+            },
+            {
+              "name": "класс",
+              "caption": "Класс комнаты",
+              "hidden": false,
+              "index": 7
+            },
+            {
+              "name": "стоимость",
+              "caption": "Стоимость комнаты",
+              "hidden": false,
+              "index": 8
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Комната",
+          "name": "комната",
+          "relatedTo": "i-i-s-otel6-комната",
+          "inverse": null
+        },
+        {
+          "lookupValue": "КодКлюча",
+          "lookupValueField": "кодКлюча",
+          "relationName": "СмартКлюч",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "кодКлюча",
+              "caption": "Код ключа",
+              "hidden": true,
+              "index": 10
+            },
+            {
+              "name": "статус",
+              "caption": "Статус ключа",
+              "hidden": false,
+              "index": 12
+            }
+          ],
+          "index": 9,
+          "type": "standard",
+          "caption": "Смарт ключ",
+          "name": "смартКлюч",
+          "relatedTo": "i-i-s-otel6-смарт-ключ",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "РегистрЗаписиE",
+          "caption": "Регистр записи",
+          "name": "регистрЗаписи",
+          "relatedTo": "i-i-s-otel6-регистр-записи",
+          "inverse": null
+        },
+        {
+          "projectionName": "ГостиE",
+          "caption": "Гости",
+          "name": "гости",
+          "relatedTo": "i-i-s-otel6-гости",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ДоступL",
+      "modelName": "i-i-s-otel6-доступ",
+      "attrs": [
+        {
+          "name": "кодДоступа",
+          "caption": "Код доступа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "доступ",
+          "caption": "Доступ",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "колвоКлючей",
+          "caption": "Колво ключей",
+          "hidden": false,
+          "index": 8
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудник",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО",
+          "name": "сотрудник",
+          "relatedTo": "i-i-s-otel6-сотрудник",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Комната",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "кодКомнаты",
+              "caption": "Код комнаты",
+              "hidden": false,
+              "index": 3
+            },
+            {
+              "name": "колвоМест",
+              "caption": "Количество мест",
+              "hidden": false,
+              "index": 4
+            },
+            {
+              "name": "класс",
+              "caption": "Класс комнаты",
+              "hidden": false,
+              "index": 5
+            },
+            {
+              "name": "стоимость",
+              "caption": "Стоимость комнаты",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Код комнаты",
+          "name": "комната",
+          "relatedTo": "i-i-s-otel6-комната",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "СмартКлюч",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "кодКлюча",
+              "caption": "Код ключа",
+              "hidden": false,
+              "index": 7
+            },
+            {
+              "name": "статус",
+              "caption": "Статус ключа",
+              "hidden": false,
+              "index": 9
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Код ключа",
+          "name": "смартКлюч",
+          "relatedTo": "i-i-s-otel6-смарт-ключ",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
