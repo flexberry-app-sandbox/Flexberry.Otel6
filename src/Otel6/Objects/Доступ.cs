@@ -352,6 +352,18 @@ namespace IIS.Otel6
             }
         }
         
+        // *** Start programmer edit section *** (Доступ.НастроитьДоступ CustomAttributes)
+
+        // *** End programmer edit section *** (Доступ.НастроитьДоступ CustomAttributes)
+        [ICSSoft.STORMNET.AccessType(ICSSoft.STORMNET.AccessType.none)]
+        public virtual void НастроитьДоступ()
+        {
+            // *** Start programmer edit section *** (Доступ.НастроитьДоступ method implementation)
+
+            return;
+            // *** End programmer edit section *** (Доступ.НастроитьДоступ method implementation)
+        }
+        
         /// <summary>
         /// Class views container.
         /// </summary>
