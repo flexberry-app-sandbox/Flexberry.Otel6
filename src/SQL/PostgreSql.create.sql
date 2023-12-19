@@ -6,8 +6,8 @@
 CREATE TABLE Гости (
  primaryKey UUID NOT NULL,
  КодГостя INT NULL,
- ФИО VARCHAR(255) NULL,
  Комментарий VARCHAR(255) NULL,
+ ФИО VARCHAR(255) NULL,
  Доступ UUID NOT NULL,
  PRIMARY KEY (primaryKey));
 
@@ -21,9 +21,9 @@ CREATE TABLE СмартКлюч (
 
 CREATE TABLE РегистрЗаписи (
  primaryKey UUID NOT NULL,
- КодРегистра INT NULL,
- ДатаЗаселения TIMESTAMP(3) NULL,
  ДатаВыезда TIMESTAMP(3) NULL,
+ ДатаЗаселения TIMESTAMP(3) NULL,
+ КодРегистра INT NULL,
  Доступ UUID NOT NULL,
  PRIMARY KEY (primaryKey));
 
@@ -38,16 +38,16 @@ CREATE TABLE Сотрудник (
 
 CREATE TABLE Отель (
  primaryKey UUID NOT NULL,
+ Адрес VARCHAR(255) NULL,
  КодОтеля INT NULL,
  Наименование VARCHAR(255) NULL,
- Адрес VARCHAR(255) NULL,
  PRIMARY KEY (primaryKey));
 
 
 CREATE TABLE Комната (
  primaryKey UUID NOT NULL,
- КодКомнаты INT NULL,
  Класс VARCHAR(7) NULL,
+ КодКомнаты INT NULL,
  КолвоМест VARCHAR(14) NULL,
  Стоимость DOUBLE PRECISION NULL,
  Отель UUID NOT NULL,
@@ -63,12 +63,12 @@ CREATE TABLE Должность (
 
 CREATE TABLE Доступ (
  primaryKey UUID NOT NULL,
+ Доступ BOOLEAN NULL,
  КодДоступа INT NULL,
  КолвоКлючей INT NULL,
- Доступ BOOLEAN NULL,
  Комната UUID NOT NULL,
- Сотрудник UUID NOT NULL,
  СмартКлюч UUID NOT NULL,
+ Сотрудник UUID NOT NULL,
  PRIMARY KEY (primaryKey));
 
 
@@ -191,11 +191,11 @@ CREATE INDEX Index406f6226a96b0d7059ce94f537118bb83452c039 on Комната (О
  ALTER TABLE Доступ ADD CONSTRAINT FKd065c4e21f6f1a242baa28a96fd1c47ce5ca955a FOREIGN KEY (Комната) REFERENCES Комната; 
 CREATE INDEX Indexd065c4e21f6f1a242baa28a96fd1c47ce5ca955a on Доступ (Комната); 
 
- ALTER TABLE Доступ ADD CONSTRAINT FKe285b729504a9c149c2680bb8ed09d8f13df26e6 FOREIGN KEY (Сотрудник) REFERENCES Сотрудник; 
-CREATE INDEX Indexe285b729504a9c149c2680bb8ed09d8f13df26e6 on Доступ (Сотрудник); 
-
  ALTER TABLE Доступ ADD CONSTRAINT FKf6588c2c696a155060169e70e96edb5c0b6ecff0 FOREIGN KEY (СмартКлюч) REFERENCES СмартКлюч; 
 CREATE INDEX Indexf6588c2c696a155060169e70e96edb5c0b6ecff0 on Доступ (СмартКлюч); 
+
+ ALTER TABLE Доступ ADD CONSTRAINT FKe285b729504a9c149c2680bb8ed09d8f13df26e6 FOREIGN KEY (Сотрудник) REFERENCES Сотрудник; 
+CREATE INDEX Indexe285b729504a9c149c2680bb8ed09d8f13df26e6 on Доступ (Сотрудник); 
 
  ALTER TABLE STORMWEBSEARCH ADD CONSTRAINT FKc4378e39870eb056aec84088683297a01d2a6200 FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
 
