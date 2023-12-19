@@ -20,7 +20,7 @@
       "type": "i-i-s-otel6-статусы",
       "flexberryType": "Статусы",
       "notNull": false,
-      "defaultValue": "4",
+      "defaultValue": "",
       "stored": true,
       "ordered": false
     }

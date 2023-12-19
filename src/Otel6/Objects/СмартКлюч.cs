@@ -40,7 +40,7 @@ namespace IIS.Otel6
         
         private int fКодКлюча;
         
-        private IIS.Otel6.Статусы fСтатус = IIS.Otel6.Статусы.4;
+        private IIS.Otel6.Статусы fСтатус;
         
         // *** Start programmer edit section *** (СмартКлюч CustomMembers)
 
